@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Kit app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+<div class="hamburger" id="hamburger">&#9776;</div>
+
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" id="closeSidebar">&times;</span>
+  <ul class="menu-list">
+    <li id="analyticsLink"><button id="analyticsToggle">📊 Analytics</button></li> 
+    
+  </ul>
+</div>
+<div class="analytics-section" id="analyticsSection" style="display: none;">
+    
+  <h2>📈 Analytics</h2>
+  <canvas id="timePieChart" width="300" height="300"></canvas>
+  <p>🎯 Avg Focused Time: <span id="avgFocus"></span></p>
+
+  <div class="metrics">
+    <div>🔥 Streak Days: <span id="streakDays"></span>
+      <button id="resetStreakBtn">Reset</button>
+    </div>
+    <div>📚 Self Study: <span id="studyTime"></span>
+    
+    <div id="selfStudy">
+  <button class="start">▶ Start</button>
+  <button class="pause">⏸ Pause</button>
+  <div id="studyProgressBar"></div>
+  <div id="studyTimeLabel"></div>
+</div>
+
+    </div>
+    <div>💪 Work Out: <span id="workoutTime"></span>
+     
+      <div id="workout">
+  <button class="start">▶ Start</button>
+  <button class="pause">⏸ Pause</button>
+  <div id="workoutProgressBar"></div>
+  <div id="workoutTimeLabel"></div>
+</div>
+      
+    </div>
+    <div>📌 Productivity: <span id="productivityTime"></span> 
+    <div id="selfProductivity">
+  <button class="start">▶ Start</button>
+  <button class="pause">⏸ Pause</button>
+  <div id="selfProgressBar"></div>
+  <div id="selfTimeLabel"></div>
+</div>
+    </div>
+  </div>
+
+<h3>📊 Weekly Time Tracker</h3>
+<canvas id="weeklyBarChart" width="400" height="200"></canvas>
+  
+  <h3>🟩 Consistency Map</h3>
+<div class="consistency-map" id="consistencyMap"></div>
+<button id="resetMapBtn">🔁 Reset Map</button>
+
+<button id="backToTodo">← Back to Tasks</button>
+
+</div>
+
+<div id="mainTodoSection">
+   <div class="heading">
+      <h2>Task Manager </h2>
+    </div>
+    <div class="container">
+        <div class="progress-container">
+            <div class="text-container">
+                <h1>My Tasks</h1>
+                <p>One step closer to your Goal !</p>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="progress-numbers">
+                <div id="numbers">0/0</div>
+            </div>
+        </div>
+
+        <form action="">
+            <input type="text"  id="taskInput" placeholder="Enter a Task!">
+            <button id="newTask" type="submit">Add</button>
+            <button class="speak">
+                <i class="fa-solid fa-microphone" style="color: #0e4bb4;"></i>
+            </button>
+        </form>
+        <ul class="task-list">
+        </ul>
+    </div>
+     <div id="message-bar"></div>
+     
+   </div>  
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</html>
